@@ -1,0 +1,119 @@
+@import "../../../variables";
+
+
+.content {
+    display: flex;
+    width: 80%;
+    box-shadow: 1px 1px 10px #eaeaeab3;
+    border-radius: 15px;
+    height: 80vh;
+
+    .nav-chat {
+        padding: 0px 20px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .chat-search {
+            border-bottom: $border;
+
+            .chat-search-form {
+                height: $chat_header-footer_height;
+                display: flex;
+                align-items: center;
+
+
+                .chat-search-btn {
+                    cursor: pointer;
+                    margin-right: 7px;
+                }
+
+                .chat-search-input {
+                    color: $text-color;
+                    outline: none;
+                    font-size: 15px;
+                    width: 100%;
+                }
+
+                ::placeholder {
+                    color: #979eb0ab;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .dialog:last-child {
+            border-bottom: none;
+        }
+
+        .chat-list {
+            box-sizing: border-box;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
+        .chat-footer {
+            border-top: $border;
+
+            .footer-wrapper {
+                @include flex-center-between;
+                height: $chat_header-footer_height;
+
+                .icon {
+                    margin: 0px 20px;
+                }
+            }
+        }
+    }
+
+    .selected-chat {
+        padding: 0px 20px;
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: #fafbfc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        .dialog-place {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            overflow: hidden;
+            overflow-y: scroll;
+
+            .typing-status {
+                text-align: center;
+                padding: 10px 0px;
+            }
+
+            .dum-wrapper {
+                height: 100%;
+                @include flex_center;
+            }
+        }
+    }
+}
+
+
+
+.msg-input,
+.msg-btn,
+.chat-search-input,
+.chat-search-btn {
+    @include cleanup-btn-input;
+}
+
+.icon {
+    cursor: pointer;
+}

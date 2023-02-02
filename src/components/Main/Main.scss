@@ -1,0 +1,75 @@
+@import "../../variables";
+
+.main {
+    max-width: 1600px;
+    margin: 20px auto 50px;
+    padding: $main_padding;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .newMsg-popUp {
+        border-radius: 14px;
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        width: 370px;
+        height: 60px;
+        padding: 20px;
+        background-color: #546282b9;
+        cursor: pointer;
+        opacity: 0;
+        transition: 0.5s;
+
+        .wrapper {
+            display: flex;
+            position: relative;
+
+            .close {
+                font-size: 30px;
+                transform: rotate(45deg);
+                position: absolute;
+                top: -21px;
+                right: -8px;
+                transition: 0.3s;
+            }
+
+            .close:hover {
+                color: #fff
+            }
+
+            .avatar-icon {
+                @include small_icons;
+                margin-right: 30px;
+
+                img {
+                    @include small_icons;
+                }
+            }
+
+            .msg-data {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .sender-name {
+                    color: #fff;
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+
+                .msg-text {
+                    width: 280px;
+                    margin-top: 10px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .newMsg-popUp:hover {
+        background-color: #546282ee;
+    }
+}

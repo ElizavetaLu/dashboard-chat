@@ -1,0 +1,10 @@
+@import "./variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f6f8;
+  color: $main_text-color;
+  font-family: 'Noto Sans Tangsa', sans-serif;
+}

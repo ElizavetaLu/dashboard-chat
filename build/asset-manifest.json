@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dashboard-chat/build/static/css/main.7a853b0e.css",
+    "main.js": "/dashboard-chat/build/static/js/main.8046810d.js",
+    "index.html": "/dashboard-chat/build/index.html",
+    "main.7a853b0e.css.map": "/dashboard-chat/build/static/css/main.7a853b0e.css.map",
+    "main.8046810d.js.map": "/dashboard-chat/build/static/js/main.8046810d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a853b0e.css",
+    "static/js/main.8046810d.js"
+  ]
+}

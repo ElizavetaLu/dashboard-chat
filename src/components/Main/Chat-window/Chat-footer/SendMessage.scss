@@ -1,0 +1,40 @@
+@import "../../../../variables";
+
+.send-message {
+    border-top: $border;
+
+    .send-message-wrapper {
+        height: $chat_header-footer_height;
+        @include flex-center-between;
+
+        .pin-btns {
+            width: 76px;
+            @include flex-center-between;
+            margin-right: 40px;
+        }
+
+        .send-message-form {
+            display: flex;
+            width: 100%;
+
+            .msg-input {
+                width: 100%;
+                outline: none;
+                color: $text-color;
+                font-size: 16px;
+            }
+
+            ::placeholder {
+                color: #647191;
+                font-size: 13px;
+                font-weight: 500;
+            }
+
+            .msg-btn {
+                cursor: pointer;
+                color: $main_blue_color;
+                outline: none;
+            }
+        }
+    }
+}

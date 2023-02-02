@@ -1,0 +1,126 @@
+@import "../../../variables";
+
+.dialog {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: $border;
+    cursor: pointer;
+
+    .avatar-list {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        width: 64px;
+
+        .test {
+            position: absolute;
+
+            .avatar-wrapper {
+                position: relative;
+
+                .user-avatar {
+                    @include small_icons;
+                    margin-right: 20px;
+
+                    img {
+                        @include small_icons;
+                    }
+                }
+
+                .circle {
+                    z-index: 100;
+                    position: absolute;
+                    right: 20px;
+                    top: -1px;
+                    width: 8px;
+                    height: 8px;
+                    border: 1.8px solid #fff;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .test.q1 {
+            top: 30px;
+        }
+
+        .test.q2 {
+            top: 60px;
+        }
+    }
+
+    .avatar-wrapper {
+        position: relative;
+
+        .user-avatar {
+            @include small_icons;
+            margin-right: 20px;
+
+            img {
+                @include small_icons;
+            }
+        }
+
+        .circle {
+            z-index: 100;
+            position: absolute;
+            right: 20px;
+            top: -1px;
+            width: 8px;
+            height: 8px;
+            border: 1.8px solid #fff;
+            border-radius: 50%;
+        }
+    }
+
+    .dialog-data {
+        display: flex;
+        flex-direction: column;
+
+        .dialog-head {
+            display: flex;
+            flex-direction: column;
+
+            .status-data {
+                @include flex-center-between;
+                font-weight: 500;
+
+                .status {
+                    font-size: 12px;
+                }
+
+                .time {
+                    font-size: 10px;
+                }
+            }
+
+            .user-name {
+                margin-top: 3px;
+                color: $main_bold_text-color;
+                font-weight: 600;
+                font-size: 13px;
+            }
+        }
+
+        .last-message {
+            margin-top: 12px;
+            font-size: 13px;
+            width: 180px;
+            max-height: 38px;
+            overflow: hidden;
+        }
+    }
+
+    .notification {
+        margin-left: 20px;
+        text-transform: uppercase;
+        font-size: 11px;
+        color: #fff;
+        border-radius: 4px;
+        padding: 4px;
+        background-color: rgb(223, 17, 17);
+    }
+}

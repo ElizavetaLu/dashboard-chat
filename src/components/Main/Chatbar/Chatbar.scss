@@ -1,0 +1,56 @@
+@import "../../../variables";
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 38px;
+
+    .start-chat-wrapper {
+        margin-bottom: 10px;
+
+        .start-chat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $main_violet_color;
+            color: #fff;
+            padding: 20px 5px;
+            border-radius: 50px;
+            box-shadow: 1px 1px 10px #7f35f65f;
+
+            .text {
+                transform: rotate(90deg);
+                white-space: nowrap;
+                margin: 30px -12px;
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+
+        .user-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+
+            .user {
+                margin-top: 20px;
+                @include small_icons;
+
+                img {
+                    @include small_icons;
+                }
+            }
+        }
+    }
+
+    .arrow-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        @include flex-center;
+        background-color: #fff;
+    }
+}

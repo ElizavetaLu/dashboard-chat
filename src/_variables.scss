@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tangsa:wght@400;500;600&display=swap');
+
+
+$main_text-color: #a1a8bc;
+$text-color: #546282;
+$main_bold_text-color: #546282;
+$main_light_text-color: #bcc3d2;
+
+$main_blue_color: #3b60f6;
+$main_violet_color: #7f35f6;
+$border: 2px solid #eceef2f0;
+
+
+$main_padding: 0px 30px 0px 50px;
+
+
+$chat_header-footer_height: 70px;
+
+
+@mixin flex-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin cleanup-btn-input {
+    border: none;
+    background-color: transparent;
+}
+
+
+@mixin small_icons{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+}

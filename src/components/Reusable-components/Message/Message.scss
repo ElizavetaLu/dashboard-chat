@@ -1,0 +1,75 @@
+@import "../../../variables";
+
+
+.message {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+
+    .data {
+        display: flex;
+        flex-direction: column;
+
+        .message-header {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            .time {
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .name {
+                color: $main_bold_text-color;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+
+        .message-text {
+            color: $main_bold_text-color;
+            width: 360px;
+            background-color: #fff;
+            border-radius: 14px;
+            padding: 29px 26px;
+            box-shadow: 1px 1px 10px #e3e3e340;
+        }
+    }
+
+    .user-icon {
+        @include small_icons;
+
+        img {
+            @include small_icons;
+        }
+    }
+}
+
+.message:last-child {
+    margin-bottom: 10px;
+}
+
+.message.sent {
+    justify-content: flex-end;
+
+    .user-icon {
+        margin-left: 20px;
+    }
+}
+
+
+.message.received {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    .data {
+        .message-header {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .user-icon {
+        margin-right: 20px;
+    }
+}

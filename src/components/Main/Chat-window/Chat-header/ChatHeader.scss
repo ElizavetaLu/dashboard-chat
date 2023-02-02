@@ -1,0 +1,33 @@
+@import "../../../../variables";
+
+.selected-chat-header {
+    border-bottom: $border;
+
+    .chat-header-wrapper {
+        height: $chat_header-footer_height;
+        @include flex-center-between;
+
+        .call-btns {
+            width: 76px;
+            @include flex-center-between;
+        }
+
+        .selected-chat-name {
+            display: flex;
+            align-items: center;
+
+            .circle {
+                width: 8px;
+                height: 8px;
+                border: 1.8px solid #fff;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+
+        .tools {
+            width: 76px;
+            @include flex-center-between;
+        }
+    }
+}

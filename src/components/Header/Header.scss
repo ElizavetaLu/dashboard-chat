@@ -1,0 +1,90 @@
+@import "../../variables";
+
+
+.header {
+    @include flex-center-between;
+    color: $main_text-color;
+    height: 89px;
+    padding: $main_padding;
+    font-weight: 600;
+    font-size: 14px;
+    color: #6f7b98;
+
+    .burger-menu {
+        @include flex-center-between;
+        color: $main_bold_text-color;
+        cursor: pointer;
+
+        .title {
+            margin-left: 20px;
+        }
+    }
+
+    .info-navigation {
+        @include flex-center-between;
+
+        .item {
+            margin: 0px 20px;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+    }
+
+    .nav-belt {
+        @include flex-center-between;
+
+        .nav {
+            color: #929cb0;
+            @include flex-center-between;
+            cursor: pointer;
+
+            .nav-title {
+                white-space: nowrap;
+
+            }
+        }
+
+        .nav.fill {
+            color: #929cb0;
+
+            .search-input {
+                outline: none;
+                border: none;
+                background-color: transparent;
+            }
+
+            ::placeholder {
+                color: #6f7b98ab;
+                font-weight: 500;
+            }
+        }
+
+        .nav.location {
+            margin-right: 70px;
+
+            .nav-title {
+                color: #6f7b98;
+                margin: 0px 18px;
+            }
+        }
+
+        .nav.user {
+            .nav-title {
+                color: #6f7b98;
+                margin-left: 18px;
+            }
+        }
+    }
+
+    .close-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        @include flex-center;
+        background-color: #fff;
+
+        .icon{
+            @include flex_center;
+        }
+    }
+}

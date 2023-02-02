@@ -1,0 +1,118 @@
+@import "../../variables";
+
+
+.log-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logIn-form {
+        box-sizing: border-box;
+        background-color: #fafbfc;
+        border-radius: 15px;
+        height: 510px;
+        width: 500px;
+        @include flex-center;
+        flex-direction: column;
+        padding: 30px 60px;
+        box-shadow: 1px 1px 10px #eeeeee63;
+
+        .text {
+            margin-bottom: 20px;
+            font-size: 32px;
+            color: $main_bold_text-color;
+            font-weight: 700;
+        }
+
+        .nameExistError {
+            height: 20px;
+            color: #d91717e3;
+            font-size: 18px;
+        }
+
+
+        .log-input {
+            width: 380px;
+            height: 50px;
+            outline: none;
+            border: 2px solid #7f35f6;
+            font-size: 20px;
+            border-radius: 6px;
+            margin: 15px 0px;
+            padding-left: 10px;
+            color: $main_bold_text-color;
+            transition: 0.2s all;
+        }
+
+        ::placeholder {
+            color: #6f7b98ab;
+            font-weight: 500;
+        }
+
+        .select-avatar {
+            margin: 10px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .select-tittle {
+                color: $main_bold_text-color;
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+
+            .avatar-list {
+                display: flex;
+                height: 50px;
+
+                .icon {
+                    width: 60px;
+                    height: 60px;
+                    cursor: pointer;
+                    margin: 0px 5px;
+                    @include flex-center;
+
+                    .user-icon {
+                        @include small_icons;
+                        transition: 0.3s;
+                    }
+
+                    .user-icon:hover {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    .user-icon:active {
+                        @include small_icons;
+                    }
+
+                    .user-icon.active{
+                        width: 50px;
+                        height: 50px;
+                        border: 3px solid #7f35f6;
+                    }
+
+                }
+
+            }
+        }
+
+        .log-btn {
+            width: 388px;
+            height: 56px;
+            background-color: #7f35f6;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 26px;
+            font-weight: 600;
+            margin: 15px 0px;
+            cursor: pointer;
+        }
+    }
+}
+
+.log-input,
+.log-btn {
+    @include cleanup-btn-input;
+}
